@@ -26,6 +26,7 @@
 		<article class="markdown-body">
 
 <!------------------------------------------- main content starts here ------------------------------------------------->
+
 <h1><a id="user-content-github-markdown-css-demo" class="anchor" href="#github-markdown-css-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Markdown CSS demo</h1>
 
 <p><a name="user-content-headers"></a></p><a name="user-content-headers">
@@ -1851,6 +1852,13 @@ break] with a line-ending space.</p>
 
 <div class="highlight highlight-js"><pre><span class="pl-k">var</span> gulp <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp<span class="pl-pds">'</span></span>);
 <span class="pl-k">var</span> myth <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp-myth<span class="pl-pds">'</span></span>);
+
+gulp.task(<span class="pl-s"><span class="pl-pds">'</span>default<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> () {
+    <span class="pl-k">return</span> gulp.<span class="pl-c1">src</span>(<span class="pl-s"><span class="pl-pds">'</span>src/app.css<span class="pl-pds">'</span></span>)
+        .pipe(myth())
+        .pipe(gulp.dest(<span class="pl-s"><span class="pl-pds">'</span>dist<span class="pl-pds">'</span></span>));
+});</pre></div>
+
 <!------------------------------------------- main content ends here ------------------------------------------------->
 
 		</article>
